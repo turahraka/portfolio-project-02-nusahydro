@@ -1,0 +1,616 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f8fafc;
+    color: #1e293b;
+
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+.section {
+    padding: 100px 20px;
+}
+
+.section-container {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.section-label {
+    margin: 0 0 10px;
+
+    color: #0284c7;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.section-title {
+    margin: 0 0 50px;
+
+    color: #0f172a;
+
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    padding: 18px 40px;
+
+    background-color: #ffffff;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar {
+    width: min(1200px, 100%);
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.logo {
+    color: #0f172a;
+
+    text-decoration: none;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #475569;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0284c7;
+}
+
+.nav-button {
+    padding: 10px 18px;
+
+    background-color: #0284c7;
+
+    border-radius: 25px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #0369a1;
+
+    transform: translateY(-2px);
+}
+
+.hero {
+    min-height: 88vh;
+
+    padding: 100px 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0f2fe,
+            #f8fafc,
+            #dbeafe
+        );
+}
+
+.hero-content {
+    width: min(800px, 100%);
+}
+
+.hero-label {
+    margin: 0 0 15px;
+
+    color: #0284c7;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: clamp(50px, 8vw, 78px);
+
+    line-height: 1.05;
+}
+
+.hero-description {
+    width: min(650px, 100%);
+
+    margin: 25px auto 0;
+
+    color: #475569;
+
+    font-size: 18px;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.primary-button {
+    background-color: #0284c7;
+
+    color: #ffffff;
+}
+
+.primary-button:hover {
+    background-color: #0369a1;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.15);
+}
+
+.secondary-button {
+    border: 2px solid #0284c7;
+
+    color: #0284c7;
+}
+
+.secondary-button:hover {
+    background-color: #0284c7;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+.benefits-section {
+    background-color: #ffffff;
+}
+
+.benefits-section .section-label,
+.benefits-section .section-title {
+    text-align: center;
+}
+
+.benefits-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.benefit-card {
+    padding: 35px;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px rgba(15, 23, 42, 0.08);
+}
+
+.benefit-number {
+    color: #0284c7;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.benefit-card h3 {
+    margin: 15px 0 10px;
+
+    color: #0f172a;
+
+    font-size: 25px;
+}
+
+.benefit-card p {
+    margin: 0;
+
+    color: #64748b;
+}
+
+.product-section {
+    background-color: #f1f5f9;
+}
+
+.product-card {
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    background-color: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.product-visual {
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0f172a,
+            #0369a1
+        );
+}
+
+.product-bottle {
+    width: 130px;
+    height: 300px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #ffffff;
+
+    border-radius: 35px 35px 45px 45px;
+
+    color: #0284c7;
+
+    font-size: 55px;
+    font-weight: 800;
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25);
+}
+
+.product-content {
+    padding: 60px;
+}
+
+.product-label {
+    margin-bottom: 15px;
+}
+
+.product-content h2 {
+    margin: 0 0 20px;
+
+    color: #0f172a;
+
+    font-size: 42px;
+
+    line-height: 1.15;
+}
+
+.product-content > p:not(.section-label) {
+    margin: 0 0 25px;
+
+    color: #475569;
+}
+
+.product-features {
+    margin: 0 0 30px;
+
+    padding-left: 20px;
+
+    color: #475569;
+}
+
+.product-features li {
+    margin-bottom: 8px;
+}
+
+.reviews-section {
+    background-color: #ffffff;
+}
+
+.reviews-section .section-label,
+.reviews-section .section-title {
+    text-align: center;
+}
+
+.reviews-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.review-card {
+    padding: 30px;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+}
+
+.review-text {
+    margin: 0 0 20px;
+
+    color: #475569;
+
+    font-size: 17px;
+}
+
+.review-author {
+    margin: 0;
+
+    color: #0284c7;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.cta-section {
+    padding: 110px 20px;
+
+    background-color: #0f172a;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+.cta-content {
+    width: min(700px, 100%);
+
+    margin: 0 auto;
+}
+
+.cta-section .section-label {
+    color: #38bdf8;
+}
+
+.cta-section h2 {
+    margin: 0;
+
+    font-size: 45px;
+
+    line-height: 1.2;
+}
+
+.cta-section p:not(.section-label) {
+    margin: 20px auto 30px;
+
+    color: #cbd5e1;
+
+    font-size: 17px;
+}
+
+.site-footer {
+    padding: 25px 20px;
+
+    background-color: #020617;
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+
+    .site-header {
+        padding: 18px 25px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 20px;
+    }
+
+    .benefits-grid,
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        grid-template-columns: 1fr;
+    }
+
+    .product-visual {
+        min-height: 350px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 75px 18px;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+
+        font-size: 32px;
+    }
+
+    .hero {
+        min-height: 82vh;
+
+        padding: 80px 18px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .button {
+        width: min(280px, 100%);
+
+        text-align: center;
+    }
+
+    .product-content {
+        padding: 35px 25px;
+    }
+
+    .product-content h2 {
+        font-size: 34px;
+    }
+
+    .product-visual {
+        min-height: 300px;
+    }
+
+    .product-bottle {
+        width: 110px;
+        height: 250px;
+    }
+
+    .cta-section {
+        padding: 80px 18px;
+    }
+
+    .cta-section h2 {
+        font-size: 34px;
+    }
+
+}
